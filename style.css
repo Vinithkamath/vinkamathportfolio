@@ -672,15 +672,17 @@ nav ul li a:hover {
     margin-bottom: 20px;
     color: #ffcc00;
 }
-/* General Styles for Desktop */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #1c1c1c; /* Adjust background color as needed */
+    color: #fff; /* Text color */
 }
 
 .container {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -690,10 +692,47 @@ body {
     text-align: center;
 }
 
-/* Mobile Responsive Styles */
+/* Fix for Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #000; /* Adjust as per theme */
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-right: 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Mobile Specific Adjustments */
 @media only screen and (max-width: 768px) {
     .container {
-        width: 100%;
         padding: 10px;
     }
     
@@ -702,58 +741,63 @@ body {
         text-align: left;
     }
 
-    /* Adjust image size */
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Responsive font size */
+    /* Responsive font size for titles and text */
     h1, h2, h3, p {
-        font-size: 1.2em;
+        font-size: 1.1em;
+        line-height: 1.5;
     }
 
-    /* Stack sections vertically */
-    .main {
-        display: block;
-    }
-
-    .column {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-    }
-
-    /* Fix navbar for mobile */
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Make the text align properly */
     .portfolio-title {
-        font-size: 2em;
+        font-size: 1.8em;
         text-align: center;
-        margin: 0 auto;
+        margin: 10px 0;
     }
 
-    /* Fix image alignment and scaling issues */
+    /* Ensure image scaling */
     .portfolio-image {
-        max-width: 100%;
+        width: 100%;
         height: auto;
-        margin: 0 auto;
+        margin: 10px auto;
         display: block;
     }
 
-    /* Ensure proper line breaks in text */
+    /* Fix text and image spacing */
     .description-text {
+        font-size: 1em;
+        line-height: 1.5;
+        margin-bottom: 20px;
         word-wrap: break-word;
     }
 
-    /* Adjust padding and margins for smaller devices */
+    /* Adjust margins for better layout */
     .main-content {
-        padding: 15px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Fix button and links alignment */
+    .button, .link {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* General layout fixes for images and text on larger screens */
+@media only screen and (min-width: 769px) {
+    .container {
+        max-width: 1200px;
+        padding: 20px;
+    }
+
+    .portfolio-image {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .portfolio-title {
+        font-size: 2.5em;
     }
 }
 
