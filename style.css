@@ -672,4 +672,57 @@ nav ul li a:hover {
     margin-bottom: 20px;
     color: #ffcc00;
 }
+/* General Styles for Desktop */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header, .main, .footer {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .header, .main, .footer {
+        padding: 10px;
+        text-align: left;
+    }
+
+    /* Adjust image size */
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Responsive font size */
+    h1, h2, h3, p {
+        font-size: 1.2em;
+    }
+
+    /* Stack sections vertically */
+    .main {
+        display: block;
+    }
+
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
 
