@@ -13,7 +13,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styling */
+/* General Styles for Laptop and Larger Screens */
 header {
     display: flex;
     justify-content: space-between;
@@ -26,629 +26,22 @@ header {
     z-index: 10;
 }
 
-/* Change the font of "Vinith Kamath G" to Kalam */
-header .logo h1 {
-    font-family: 'Kalam', cursive;
-    color: #ff0000;
-    font-size: 24px;
-    font-weight: 700;
-}
+/* More laptop styling here... */
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffcc00;
-}
-
-/* Home Section */
-.home-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0d0d0d /* White background */
-    text-align: center;
-    padding: 0 20px; /* Optional padding for spacing */
-}
-
-.intro {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px; /* Space between text and GIF */
-    color: #b29898; /* Text color */
-}
-
-.intro-text {
-    max-width: 600px; /* Limit width of the text */
-}
-
-.intro p {
-    font-size: 18px;
-    color: #ffcc00;
-    margin-bottom: 10px;
-}
-
-.intro h2 {
-    font-size: 48px;
-    font-weight: 700;
-    color: #f3f1f0; /* Text color */
-}
-
-.intro h3 {
-    font-size: 24px;
-    color: #10e210; /* Text color */
-}
-
-.intro-gif {
-    max-width: 150px; /* Set the maximum width for the GIF */
-    height: auto; /* Maintain aspect ratio */
-    border: 2px solid #ffcc00; /* Optional border around the GIF */
-    border-radius: 10px; /* Optional rounded corners */
-}
-
-
-
-/* Rest of the styles */
-
-/* Zoom In Animation */
-@keyframes zoomIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.8) translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-/* Fade In Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Fade In Up Animation */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* About Section */
-.about-section {
-    padding: 100px 20px;
-    background-color: #2a2a2a;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 2s ease-in-out forwards;
-    animation-delay: 1s; /* Start animation after 1s delay */
-    position: relative; /* For the pseudo-element positioning */
-    border: 3px solid #ffcc00; /* Border color */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Shadow for 3D effect */
-    overflow: hidden; /* Ensures content stays within border radius */
-}
-
-.about-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px; /* Matches border radius */
-    background: linear-gradient(45deg, rgba(255, 204, 0, 0.2), rgba(255, 204, 0, 0)); /* Gradient effect */
-    z-index: 1; /* Places it behind the content */
-    pointer-events: none; /* Ensures it doesn't interfere with interactions */
-}
-
-.about-section .container {
-    position: relative; /* To stack content above the pseudo-element */
-    z-index: 2; /* Ensures content is above the gradient */
-}
-
-/* Existing styles for heading and paragraph */
-.about-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ffcc00;
-}
-
-.about-section p {
-    font-size: 18px;
-    color: #ffffff;
-}
-
-/* Add this CSS to your style.css */
-
-/* Skills Section */
-.skills-section {
-    padding: 100px 20px;
-    background-color: #2a2a2a;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 2s ease-in-out forwards;
-    animation-delay: 4s; /* Adjust delay to fit your animation sequence */
-}
-
-.skills-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ffcc00;
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.skill {
-    background-color: #1a1a1a;
-    border: 2px solid #ffcc00;
-    border-radius: 8px;
-    padding: 20px;
-    width: 250px;
-    text-align: left;
-}
-
-.skill h3 {
-    font-size: 24px;
-    color: #ffcc00;
-    margin-bottom: 10px;
-}
-
-.skill p {
-    font-size: 18px;
-    color: #ffffff;
-}
-
-
-
-/* Resume Section */
-.resume-section {
-    padding: 100px 20px;
-    background-color: #1a1a1a;
-    text-align: center;
-    opacity: 0;
-    transform: translateX(-50px);
-    animation: fadeInLeft 2s ease-in-out forwards;
-    animation-delay: 2s; /* Start animation after 2s delay */
-}
-
-.resume-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ffcc00;
-}
-
-.resume-section a {
-    color: #ffcc00;
-    text-decoration: none;
-}
-
-/* Projects Section */
-.projects-section {
-    padding: 100px 20px;
-    background-color: #2a2a2a;
-    text-align: center;
-}
-
-.projects-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ffcc00;
-}
-
-/* Project Box */
-.project-box {
-    background-color: #333333;
-    border: 2px solid;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-/* Project 1 Border Animation */
-.project-box:nth-of-type(1) {
-    animation: border-color-animation-1 6s infinite alternate;
-}
-
-@keyframes border-color-animation-1 {
-    0% {
-        border-color: #ffcc00; /* Yellow */
-    }
-    25% {
-        border-color: #ff6600; /* Orange */
-    }
-    50% {
-        border-color: #33cc33; /* Green */
-    }
-    75% {
-        border-color: #3399ff; /* Blue */
-    }
-    100% {
-        border-color: #ffcc00; /* Back to yellow */
-    }
-}
-
-/* Project 2 Border Animation */
-.project-box:nth-of-type(2) {
-    animation: border-color-animation-2 6s infinite alternate;
-}
-
-@keyframes border-color-animation-2 {
-    0% {
-        border-color: #ff99cc; /* Pink */
-    }
-    25% {
-        border-color: #cc33ff; /* Purple */
-    }
-    50% {
-        border-color: #ffcc00; /* Yellow */
-    }
-    75% {
-        border-color: #3399ff; /* Light Blue */
-    }
-    100% {
-        border-color: #ff99cc; /* Back to Pink */
-    }
-}
-
-/* Project 3 Border Animation */
-.project-box:nth-of-type(3) {
-    animation: border-color-animation-3 6s infinite alternate;
-}
-
-@keyframes border-color-animation-3 {
-    0% {
-        border-color: #33cc33; /* Green */
-    }
-    25% {
-        border-color: #33ccff; /* Cyan */
-    }
-    50% {
-        border-color: #ff6600; /* Orange */
-    }
-    75% {
-        border-color: #ff3399; /* Pink */
-    }
-    100% {
-        border-color: #33cc33; /* Back to Green */
-    }
-}
-
-/* Project 4 Border Animation */
-.project-box:nth-of-type(4) {
-    animation: border-color-animation-4 6s infinite alternate;
-}
-
-@keyframes border-color-animation-4 {
-    0% {
-        border-color: #ffcc00; /* Yellow */
-    }
-    25% {
-        border-color: #ff0000; /* Red */
-    }
-    50% {
-        border-color: #66ff66; /* Light Green */
-    }
-    75% {
-        border-color: #3399ff; /* Blue */
-    }
-    100% {
-        border-color: #ffcc00; /* Back to yellow */
-    }
-}
-
-/* Project 5 Border Animation */
-.project-box:nth-of-type(5) {
-    animation: border-color-animation-5 6s infinite alternate;
-}
-
-@keyframes border-color-animation-5 {
-    0% {
-        border-color: #ff66ff; /* Magenta */
-    }
-    25% {
-        border-color: #ffcc33; /* Golden */
-    }
-    50% {
-        border-color: #66ff33; /* Light Green */
-    }
-    75% {
-        border-color: #3366ff; /* Deep Blue */
-    }
-    100% {
-        border-color: #ff66ff; /* Back to Magenta */
-    }
-}
-
-/* Project 6 Border Animation */
-.project-box:nth-of-type(6) {
-    animation: border-color-animation-6 6s infinite alternate;
-}
-
-@keyframes border-color-animation-6 {
-    0% {
-        border-color: #ff3333; /* Bright Red */
-    }
-    25% {
-        border-color: #ff66b2; /* Pink */
-    }
-    50% {
-        border-color: #ffcc66; /* Light Orange */
-    }
-    75% {
-        border-color: #66ccff; /* Light Blue */
-    }
-    100% {
-        border-color: #ff3333; /* Back to Bright Red */
-    }
-}
-
-.project-box h3 {
-    font-size: 24px;
-    color: #ffcc00;
-    margin-bottom: 10px;
-}
-
-.project-box p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.project-box a {
-    color: #ffcc00;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project-box a:hover {
-    text-decoration: underline;
-}
-
-/* Awards Section */
-.awards-section {
-    padding: 100px 20px;
-    background-color: #2a2a2a;
-    text-align: center;
-}
-
-.awards-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ffcc00;
-}
-
-/* Award Box with Animated Border */
-.award-box {
-    background-color: #333333;
-    border: 2px solid #ffcc00;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: left;
-    animation: border-color-animation 6s infinite alternate; /* Add animation to border */
-}
-
-/* Keyframes for border color animation */
-@keyframes border-color-animation {
-    0% {
-        border-color: #ffcc00; /* Starting color (yellow) */
-    }
-    25% {
-        border-color: #ff6600; /* Orange */
-    }
-    50% {
-        border-color: #33cc33; /* Green */
-    }
-    75% {
-        border-color: #3399ff; /* Blue */
-    }
-    100% {
-        border-color: #ffcc00; /* Back to yellow */
-    }
-}
-
-.award-box h3 {
-    font-size: 24px;
-    color: #ffcc00;
-    margin-bottom: 10px;
-}
-
-.award-box p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.award-box a {
-    color: #ffcc00;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.award-box a:hover {
-    text-decoration: underline;
-}
-
-
-/* Contact Section */
-.contact-section {
-    padding: 100px 20px;
-    background-color: #2a2a2a;
-    text-align: center;
-    border: 2px solid #ffffff;
-    border-radius: 8px;
-    margin: 20px 0;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 2s ease-in-out forwards;
-    animation-delay: 4s; /* Start animation after 4s delay */
-}
-
-.contact-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ffcc00;
-}
-
-.contact-section p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-/* Contact Form */
-.contact-content form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.contact-content label {
-    display: block;
-    margin-bottom: 5px;
-    color: #ffffff;
-}
-
-.contact-content input,
-.contact-content textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ffffff;
-    border-radius: 4px;
-    background-color: #333333;
-    color: #ffffff;
-}
-
-.contact-content button {
-    background-color: #ffcc00;
-    color: #000000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.contact-content button:hover {
-    background-color: #e6b800;
-}
-
-/* Social Media Links */
-.social-media {
-    margin-top: 20px;
-}
-
-.social-media h3 {
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.social-media a {
-    display: inline-block;
-    margin: 0 10px;
-    color: #ffcc00;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.social-media a:hover {
-    color: #e6b800;
-}
-
-
-
-
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 /* Experience Section Styling */
 .experience {
     padding: 20px;
     margin: 20px 0;
-    border: 4px solid #ffffff; /* Increased border size */
+    border: 4px solid #ffffff;
     border-radius: 10px;
-    transition: border-color 0.5s ease-in-out, border-width 0.5s ease-in-out; /* Added transition for border-width */
+    transition: border-color 0.5s ease-in-out, border-width 0.5s ease-in-out;
 }
 
 .experience:hover {
-    border-color: #ff006f; /* Change this color as desired */
-    border-width: 6px; /* Increase border width on hover for a more pronounced effect */
+    border-color: #ff006f;
+    border-width: 6px;
 }
 
-/* Additional Styling for Experience Section */
 .experience h3 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -659,6 +52,7 @@ nav ul li a:hover {
     font-size: 16px;
     color: #e0e0e0;
 }
+
 /* Awards Section */
 .awards-section {
     padding: 100px 20px;
@@ -673,4 +67,148 @@ nav ul li a:hover {
     color: #ffcc00;
 }
 
+/* MEDIA QUERIES FOR MOBILE */
 
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Home Section */
+    .home-section {
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .intro h2 {
+        font-size: 36px; /* Smaller font for mobile */
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    .intro-gif {
+        max-width: 100px; /* Smaller GIF size on mobile */
+    }
+
+    /* Experience Section */
+    .experience h3 {
+        font-size: 20px; /* Smaller heading size */
+    }
+
+    .experience p {
+        font-size: 14px;
+    }
+
+    .experience {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    /* Awards Section */
+    .awards-section h2 {
+        font-size: 28px;
+    }
+
+    .awards-section {
+        padding: 50px 15px;
+    }
+
+    /* Adjust Project Section for Mobile */
+    .project-box {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+    .project-box h3 {
+        font-size: 20px;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 50px 15px;
+    }
+
+    .contact-content input, .contact-content textarea {
+        padding: 8px;
+    }
+
+    .contact-content button {
+        padding: 8px 15px;
+    }
+
+    /* Social Media Links */
+    .social-media a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smaller Mobile Devices */
+    header {
+        padding: 5px;
+    }
+
+    .home-section {
+        padding: 0 5px;
+    }
+
+    .intro h2 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        font-size: 14px;
+    }
+
+    /* Adjust Experience Section for Small Mobile Devices */
+    .experience h3 {
+        font-size: 18px;
+    }
+
+    .experience p {
+        font-size: 12px;
+    }
+
+    /* Awards Section */
+    .awards-section h2 {
+        font-size: 24px;
+    }
+
+    .awards-section {
+        padding: 30px 10px;
+    }
+
+    /* Project Section */
+    .project-box {
+        padding: 10px;
+    }
+
+    .project-box h3 {
+        font-size: 18px;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 30px 10px;
+    }
+
+    .contact-content input, .contact-content textarea {
+        padding: 6px;
+    }
+
+    .contact-content button {
+        padding: 6px 10px;
+    }
+}
